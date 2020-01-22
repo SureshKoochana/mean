@@ -1,2 +1,27 @@
-<h1>Hello from the post create component</h1>
-
+<mat-card>
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+      <input
+       matInput
+       type="text"
+       name="title"
+       ngModel
+       required
+       minlength="3">
+    </mat-form-field>
+    <mat-form-field>
+     <textarea
+      matInput
+      rows="10"
+      name="content"
+      ngModel
+      required>
+    </textarea>
+    </mat-form-field>
+    <button
+    mat-raised-button
+    color="primary"
+    type="submit">Save Post
+    </button>
+  </form>
+</mat-card>
